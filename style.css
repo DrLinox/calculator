@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Handjet:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html{
+  font-family: 'Handjet', cursive;
+}
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(to right, coral , cornflowerblue);
+}
+.calculator-grid{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4,90px);
+  grid-template-rows: minmax(120px,auto) repeat(5,90px);
+}
+.calculator-grid>button{
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-size: 20px;
+  padding: 5px;
+  font-weight: 500;
+  background-color: rgb(255, 255, 255,0.5);
+  outline: none;
+  border: 1px solid white;
+}
+.calculator-grid>button:hover{
+  background-color: white;
+}
+.calculator-grid>button:active{
+  font-weight: bold;
+}
+.two-span{
+  grid-column: span 2;
+}
+.screen{
+  grid-column: 1/-1;
+  background-color: rgb(51, 109, 105);
+  display: flex;
+  color: rgb(197, 228, 134);
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.current-operand{
+  margin: 20px 20px;
+  font-size: 45px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.previous-operand{
+  margin: 20px 20px;
+  font-size: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
